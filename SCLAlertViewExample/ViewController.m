@@ -247,6 +247,79 @@ NSString *kAttributeTitle = @"Attributed string operation successfully completed
     [alert showTitle:self title:@"Congratulations" subTitle:kAttributeTitle style:SCLAlertViewStyleSuccess closeButtonTitle:@"Done" duration:0.0f];
 }
 
+- (IBAction)showTitleAttributedAndCustomView:(id)sender {
+    
+    SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindowWidth:300];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100., 100.)];
+    [imageView setImage:[UIImage imageNamed:@"student"]];
+    [alert addCustomView:imageView];
+    [alert setHorizontalButtons:YES];
+    [alert removeTopCircle];
+    alert.backgroundViewColor = [UIColor cyanColor];
+    
+    [alert setTitleFontFamily:@"Superclarendon" withSize:20.0f];
+    [alert setBodyTextFontFamily:@"TrebuchetMS" withSize:14.0f];
+    [alert setButtonsTextFontFamily:@"Baskerville" withSize:14.0f];
+    
+    
+    alert.buttonFormatBlock = ^NSDictionary *{
+        NSMutableDictionary *buttonConfig = [[NSMutableDictionary alloc] init];
+        
+        buttonConfig[@"backgroundColor"] = [UIColor greenColor];
+        buttonConfig[@"borderColor"] = [UIColor blackColor];
+        buttonConfig[@"borderWidth"] = @"1.0f";
+        buttonConfig[@"textColor"] = [UIColor blackColor];
+        
+        return buttonConfig;
+    };
+    
+    
+    [alert addButton:@"Second Button" actionBlock:^(void) {
+        NSLog(@"Second button tapped");
+    }];
+    
+    [alert addButton:@"First Button" target:self selector:@selector(firstButton)];
+
+    
+    SCLTextView *textField = [alert addTextField:@"Enter your name"];
+    
+    [alert addButton:@"Show Name" actionBlock:^(void) {
+        NSLog(@"Text value: %@", textField.text);
+    }];
+    
+    
+    alert.completeButtonFormatBlock = ^NSDictionary* (void)
+    {
+        NSMutableDictionary *buttonConfig = [[NSMutableDictionary alloc] init];
+        
+        buttonConfig[@"backgroundColor"] = [UIColor greenColor];
+        buttonConfig[@"borderColor"] = [UIColor blackColor];
+        buttonConfig[@"borderWidth"] = @"1.0f";
+        buttonConfig[@"textColor"] = [UIColor blackColor];
+        
+        return buttonConfig;
+    };
+    
+    alert.attributedFormatBlock = ^NSAttributedString* (NSString *value)
+    {
+        NSMutableAttributedString *subTitle = [[NSMutableAttributedString alloc]initWithString:value];
+        
+        [subTitle addAttribute:NSKernAttributeName value:@1 range:NSMakeRange(0, subTitle.length)];
+        
+        return subTitle;
+    };
+    
+    alert.attributedTitleFormatBlock = ^NSAttributedString *(NSString *value) {
+        NSMutableAttributedString *title = [[NSMutableAttributedString alloc]initWithString:value];
+        
+        [title addAttribute:NSKernAttributeName value:@6 range:NSMakeRange(0, title.length)];
+
+        return title;
+    };
+    
+    [alert showTitle:self title:@"Congratulations" subTitle:kAttributeTitle style:SCLAlertViewStyleSuccess closeButtonTitle:@"Done" duration:0.0f];
+}
+
 - (IBAction)showWithDuration:(id)sender
 {
     SCLAlertView *alert = [[SCLAlertView alloc] init];

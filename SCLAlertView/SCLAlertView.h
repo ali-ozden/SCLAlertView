@@ -16,6 +16,7 @@
 #import "SCLSwitchView.h"
 
 typedef NSAttributedString* (^SCLAttributedFormatBlock)(NSString *value);
+typedef NSAttributedString* (^SCLAttributedTitleFormatBlock)(NSString *value);
 typedef void (^SCLDismissBlock)(void);
 typedef void (^SCLDismissAnimationCompletionBlock)(void);
 typedef void (^SCLShowAnimationCompletionBlock)(void);
@@ -139,6 +140,12 @@ typedef NS_ENUM(NSInteger, SCLAlertViewBackground)
  * Holds the attributed string.
  */
 @property (copy, nonatomic) SCLAttributedFormatBlock attributedFormatBlock;
+
+/** Set text attributed title format block
+ *
+ * Holds the attributed string.
+ */
+@property (copy, nonatomic) SCLAttributedTitleFormatBlock attributedTitleFormatBlock;
 
 /** Set Complete button format block.
  *
@@ -546,6 +553,7 @@ typedef NS_ENUM(NSInteger, SCLAlertViewBackground)
 @property(copy, nonatomic) SCLAlertViewBuilder *(^activityIndicatorView) (UIActivityIndicatorView *activityIndicatorView);
 @property(copy, nonatomic) SCLAlertViewBuilder *(^shouldDismissOnTapOutside) (BOOL shouldDismissOnTapOutside);
 @property(copy, nonatomic) SCLAlertViewBuilder *(^soundURL) (NSURL *soundURL);
+@property(copy, nonatomic) SCLAlertViewBuilder *(^attributedTitleFormatBlock) (SCLAttributedTitleFormatBlock attributedTitleFormatBlock);
 @property(copy, nonatomic) SCLAlertViewBuilder *(^attributedFormatBlock) (SCLAttributedFormatBlock attributedFormatBlock);
 @property(copy, nonatomic) SCLAlertViewBuilder *(^completeButtonFormatBlock) (CompleteButtonFormatBlock completeButtonFormatBlock);
 @property(copy, nonatomic) SCLAlertViewBuilder *(^buttonFormatBlock) (ButtonFormatBlock buttonFormatBlock);

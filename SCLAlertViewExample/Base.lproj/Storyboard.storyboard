@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ohq-jH-G4R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ohq-jH-G4R">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,222 +24,198 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-ao-PJ6">
                                 <rect key="frame" x="0.0" y="20" width="600" height="740"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-B7-Lji">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-B7-Lji">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="740"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sB-cQ-cdn">
-                                                <rect key="frame" x="250" y="8" width="100" height="30"/>
-                                                <state key="normal" title="Show Success">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showSuccess:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="ACK-QB-4RN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-Vj-GRG">
-                                                <rect key="frame" x="213" y="46" width="174" height="30"/>
-                                                <state key="normal" title="Show Success Horizontal">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showSuccessWithHorizontalButtons:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="vOg-dp-y6a"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U1-31-wBg">
-                                                <rect key="frame" x="262" y="84" width="76" height="30"/>
-                                                <state key="normal" title="Show Error">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showError:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="stK-8e-Ode"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYK-Po-EUn">
-                                                <rect key="frame" x="257" y="122" width="87" height="30"/>
-                                                <state key="normal" title="Show Notice">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showNotice:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="SHr-Zs-qrR"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-Bd-hKP">
-                                                <rect key="frame" x="251" y="160" width="99" height="30"/>
-                                                <state key="normal" title="Show Warning">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showWarning:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="kBb-ZH-gS3"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-Im-7MS">
-                                                <rect key="frame" x="266" y="198" width="68" height="30"/>
-                                                <state key="normal" title="Show Info">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showInfo:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="bdE-6Y-hsO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mww-Jw-0ao">
-                                                <rect key="frame" x="266" y="236" width="69" height="30"/>
-                                                <state key="normal" title="Show Edit">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showEdit:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="bDO-A6-Ero"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMj-f6-6wK">
-                                                <rect key="frame" x="229" y="274" width="143" height="30"/>
-                                                <state key="normal" title="Show Edit Horizontal">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showEditWithHorizontalButtons:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="SdU-1v-eYK"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ID-0w-GrU">
-                                                <rect key="frame" x="245" y="312" width="110" height="30"/>
-                                                <state key="normal" title="Show Advanced">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showAdvanced:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="uYS-7O-vUK"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmI-Rk-qEB">
-                                                <rect key="frame" x="208" y="350" width="184" height="30"/>
-                                                <state key="normal" title="Show Advanced Horizontal">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="ShowAdvancedWithHorizontalButtons:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="Kih-Fi-YTO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0L-ki-asc">
-                                                <rect key="frame" x="232" y="388" width="136" height="30"/>
-                                                <state key="normal" title="Show With Duration">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showWithDuration:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="aqD-3F-YmJ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRS-IB-vIQ">
-                                                <rect key="frame" x="253" y="426" width="95" height="30"/>
-                                                <state key="normal" title="Show Custom">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showCustom:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="m4v-4B-1YQ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBG-LD-1eZ">
-                                                <rect key="frame" x="246" y="464" width="109" height="30"/>
-                                                <state key="normal" title="Show Validation">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showValidation:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="1DV-xd-ugz"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzD-FT-qzG">
-                                                <rect key="frame" x="209" y="502" width="183" height="30"/>
-                                                <state key="normal" title="Show Validation Horizontal">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showValidationWithHorizontalButtons:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="jui-gR-oAz"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-sr-WWC">
-                                                <rect key="frame" x="254" y="540" width="93" height="30"/>
-                                                <state key="normal" title="Show Waiting">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showWaiting:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="ler-Oz-x3u"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leu-lo-T4a">
-                                                <rect key="frame" x="259" y="578" width="82" height="30"/>
-                                                <state key="normal" title="Show Timer">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showTimer:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="TB1-ia-8d6"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-Gh-y6B">
-                                                <rect key="frame" x="248" y="616" width="104" height="30"/>
-                                                <state key="normal" title="Show Question">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showQuestion:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="Uxe-EB-NJt"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhK-gL-Uxt">
-                                                <rect key="frame" x="256" y="654" width="88" height="30"/>
-                                                <state key="normal" title="Show Switch">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showSwitch:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="4iQ-FM-yN0"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWU-7m-rp7">
-                                                <rect key="frame" x="193" y="692" width="215" height="30"/>
-                                                <state key="normal" title="Show With Button Custom Font">
-                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showWithButtonCustom:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="KF6-SJ-jig"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="7a8-Fz-Fmv">
+                                                <rect key="frame" x="192.5" y="0.0" width="215" height="733"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sB-cQ-cdn">
+                                                        <rect key="frame" x="57.5" y="0.0" width="100" height="30"/>
+                                                        <state key="normal" title="Show Success">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showSuccess:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="ACK-QB-4RN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-Vj-GRG">
+                                                        <rect key="frame" x="20.5" y="37" width="174" height="30"/>
+                                                        <state key="normal" title="Show Success Horizontal">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showSuccessWithHorizontalButtons:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="vOg-dp-y6a"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U1-31-wBg">
+                                                        <rect key="frame" x="69.5" y="74" width="76" height="30"/>
+                                                        <state key="normal" title="Show Error">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showError:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="stK-8e-Ode"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYK-Po-EUn">
+                                                        <rect key="frame" x="64" y="111" width="87" height="30"/>
+                                                        <state key="normal" title="Show Notice">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showNotice:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="SHr-Zs-qrR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-Bd-hKP">
+                                                        <rect key="frame" x="58" y="148" width="99" height="30"/>
+                                                        <state key="normal" title="Show Warning">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showWarning:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="kBb-ZH-gS3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-Im-7MS">
+                                                        <rect key="frame" x="73.5" y="185" width="68" height="30"/>
+                                                        <state key="normal" title="Show Info">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showInfo:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="bdE-6Y-hsO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mww-Jw-0ao">
+                                                        <rect key="frame" x="73" y="222" width="69" height="30"/>
+                                                        <state key="normal" title="Show Edit">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showEdit:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="bDO-A6-Ero"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMj-f6-6wK">
+                                                        <rect key="frame" x="36" y="259" width="143" height="30"/>
+                                                        <state key="normal" title="Show Edit Horizontal">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showEditWithHorizontalButtons:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="SdU-1v-eYK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ID-0w-GrU">
+                                                        <rect key="frame" x="52.5" y="296" width="110" height="30"/>
+                                                        <state key="normal" title="Show Advanced">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showAdvanced:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="uYS-7O-vUK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmI-Rk-qEB">
+                                                        <rect key="frame" x="15.5" y="333" width="184" height="30"/>
+                                                        <state key="normal" title="Show Advanced Horizontal">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ShowAdvancedWithHorizontalButtons:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="Kih-Fi-YTO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0L-ki-asc">
+                                                        <rect key="frame" x="39.5" y="370" width="136" height="30"/>
+                                                        <state key="normal" title="Show With Duration">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showWithDuration:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="aqD-3F-YmJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRS-IB-vIQ">
+                                                        <rect key="frame" x="60" y="407" width="95" height="30"/>
+                                                        <state key="normal" title="Show Custom">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showCustom:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="m4v-4B-1YQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBG-LD-1eZ">
+                                                        <rect key="frame" x="53" y="444" width="109" height="30"/>
+                                                        <state key="normal" title="Show Validation">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showValidation:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="1DV-xd-ugz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzD-FT-qzG">
+                                                        <rect key="frame" x="16" y="481" width="183" height="30"/>
+                                                        <state key="normal" title="Show Validation Horizontal">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showValidationWithHorizontalButtons:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="jui-gR-oAz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-sr-WWC">
+                                                        <rect key="frame" x="61" y="518" width="93" height="30"/>
+                                                        <state key="normal" title="Show Waiting">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showWaiting:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="ler-Oz-x3u"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leu-lo-T4a">
+                                                        <rect key="frame" x="67" y="555" width="81" height="30"/>
+                                                        <state key="normal" title="Show Timer">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showTimer:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="TB1-ia-8d6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-Gh-y6B">
+                                                        <rect key="frame" x="55.5" y="592" width="104" height="30"/>
+                                                        <state key="normal" title="Show Question">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showQuestion:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="Uxe-EB-NJt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhK-gL-Uxt">
+                                                        <rect key="frame" x="63.5" y="629" width="88" height="30"/>
+                                                        <state key="normal" title="Show Switch">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showSwitch:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="4iQ-FM-yN0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWU-7m-rp7">
+                                                        <rect key="frame" x="0.0" y="666" width="215" height="30"/>
+                                                        <state key="normal" title="Show With Button Custom Font">
+                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showWithButtonCustom:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="KF6-SJ-jig"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-sP-ss2">
+                                                        <rect key="frame" x="35" y="703" width="145" height="30"/>
+                                                        <state key="normal" title="Show Title Attributed"/>
+                                                        <connections>
+                                                            <action selector="showTitleAttributedAndCustomView:" destination="Ohq-jH-G4R" eventType="touchUpInside" id="9IV-Mt-0iq"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="ag6-Vj-GRG" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="1hP-36-Id5"/>
-                                            <constraint firstItem="NmI-Rk-qEB" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="2I8-Yq-uiv"/>
-                                            <constraint firstItem="7sB-cQ-cdn" firstAttribute="top" secondItem="NCh-B7-Lji" secondAttribute="top" constant="8" id="2g1-HO-ZIm"/>
-                                            <constraint firstItem="fs5-sr-WWC" firstAttribute="top" secondItem="tzD-FT-qzG" secondAttribute="bottom" constant="8" id="91L-KS-FCe"/>
-                                            <constraint firstItem="QYK-Po-EUn" firstAttribute="top" secondItem="4U1-31-wBg" secondAttribute="bottom" constant="8" id="C76-H6-Emg"/>
-                                            <constraint firstItem="7sB-cQ-cdn" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="ERR-MA-R5N"/>
-                                            <constraint firstItem="mww-Jw-0ao" firstAttribute="top" secondItem="cKc-Im-7MS" secondAttribute="bottom" constant="8" id="FO7-Jh-vjn"/>
-                                            <constraint firstItem="uMj-f6-6wK" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="GLm-fP-gYt"/>
-                                            <constraint firstItem="4U1-31-wBg" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="Kto-6S-eLu"/>
-                                            <constraint firstItem="mww-Jw-0ao" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="LOa-qV-cwx"/>
-                                            <constraint firstItem="yhK-gL-Uxt" firstAttribute="top" secondItem="D2w-Gh-y6B" secondAttribute="bottom" constant="8" id="LkO-Je-cHq"/>
-                                            <constraint firstItem="w0L-ki-asc" firstAttribute="top" secondItem="NmI-Rk-qEB" secondAttribute="bottom" constant="8" id="OxE-9D-2WS"/>
-                                            <constraint firstItem="cKc-Im-7MS" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="QJa-MB-5ee"/>
-                                            <constraint firstItem="QYK-Po-EUn" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="TKF-Og-nyl"/>
-                                            <constraint firstItem="yhK-gL-Uxt" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="Uxu-iz-lVj"/>
-                                            <constraint firstItem="XBG-LD-1eZ" firstAttribute="top" secondItem="DRS-IB-vIQ" secondAttribute="bottom" constant="8" id="WWR-On-NCy"/>
-                                            <constraint firstItem="D2w-Gh-y6B" firstAttribute="top" secondItem="Leu-lo-T4a" secondAttribute="bottom" constant="8" id="Yqb-U3-Tkk"/>
-                                            <constraint firstItem="uMj-f6-6wK" firstAttribute="top" secondItem="mww-Jw-0ao" secondAttribute="bottom" constant="8" id="Z2N-3t-sqs"/>
-                                            <constraint firstItem="D2w-Gh-y6B" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="ZND-vf-DeL"/>
-                                            <constraint firstItem="8ID-0w-GrU" firstAttribute="top" secondItem="uMj-f6-6wK" secondAttribute="bottom" constant="8" id="ZVR-aq-qZc"/>
-                                            <constraint firstItem="DRS-IB-vIQ" firstAttribute="top" secondItem="w0L-ki-asc" secondAttribute="bottom" constant="8" id="Zag-dD-BZ3"/>
-                                            <constraint firstItem="w0L-ki-asc" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="d9A-Sj-krI"/>
-                                            <constraint firstItem="c2J-Bd-hKP" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="dfZ-Ql-0Kk"/>
-                                            <constraint firstItem="XBG-LD-1eZ" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="eNG-AJ-iib"/>
-                                            <constraint firstItem="hWU-7m-rp7" firstAttribute="top" secondItem="yhK-gL-Uxt" secondAttribute="bottom" constant="8" id="fzH-AO-TvB"/>
-                                            <constraint firstAttribute="bottom" secondItem="hWU-7m-rp7" secondAttribute="bottom" id="gVv-lI-aoJ"/>
-                                            <constraint firstItem="4U1-31-wBg" firstAttribute="top" secondItem="ag6-Vj-GRG" secondAttribute="bottom" constant="8" id="gZE-NY-UTd"/>
-                                            <constraint firstItem="Leu-lo-T4a" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="iWV-mf-Mzy"/>
-                                            <constraint firstItem="c2J-Bd-hKP" firstAttribute="top" secondItem="QYK-Po-EUn" secondAttribute="bottom" constant="8" id="ifR-p4-7nF"/>
-                                            <constraint firstItem="cKc-Im-7MS" firstAttribute="top" secondItem="c2J-Bd-hKP" secondAttribute="bottom" constant="8" id="ioH-jM-dOb"/>
-                                            <constraint firstItem="NmI-Rk-qEB" firstAttribute="top" secondItem="8ID-0w-GrU" secondAttribute="bottom" constant="8" id="jWm-Xy-isv"/>
-                                            <constraint firstItem="Leu-lo-T4a" firstAttribute="top" secondItem="fs5-sr-WWC" secondAttribute="bottom" constant="8" id="jiX-9F-XFx"/>
-                                            <constraint firstItem="fs5-sr-WWC" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="oJP-iu-g86"/>
-                                            <constraint firstItem="hWU-7m-rp7" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="pje-W5-aed"/>
-                                            <constraint firstItem="tzD-FT-qzG" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="ps2-OS-zST"/>
-                                            <constraint firstItem="8ID-0w-GrU" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="qbM-hv-2KN"/>
-                                            <constraint firstItem="ag6-Vj-GRG" firstAttribute="top" secondItem="7sB-cQ-cdn" secondAttribute="bottom" constant="8" id="qlh-V6-p5u"/>
-                                            <constraint firstItem="DRS-IB-vIQ" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="sbh-VA-Orb"/>
-                                            <constraint firstItem="tzD-FT-qzG" firstAttribute="top" secondItem="XBG-LD-1eZ" secondAttribute="bottom" constant="8" id="y1M-O6-uDP"/>
+                                            <constraint firstItem="7a8-Fz-Fmv" firstAttribute="top" secondItem="NCh-B7-Lji" secondAttribute="top" id="Npd-wN-TeF"/>
+                                            <constraint firstAttribute="bottom" secondItem="7a8-Fz-Fmv" secondAttribute="bottom" constant="7" id="Xje-Nb-8tT"/>
+                                            <constraint firstItem="7a8-Fz-Fmv" firstAttribute="centerX" secondItem="NCh-B7-Lji" secondAttribute="centerX" id="eR7-SL-jym"/>
                                         </constraints>
                                     </view>
                                 </subviews>

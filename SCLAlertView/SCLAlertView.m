@@ -340,25 +340,29 @@ SCLTimerDisplay *buttonTimer;
     _circleIconImageView.frame = CGRectMake(kCircleHeight / 2 - _circleIconHeight / 2, kCircleHeight / 2 - _circleIconHeight / 2, _circleIconHeight, _circleIconHeight);
     _labelTitle.frame = CGRectMake(12.0f, kTitleTop, _windowWidth - 24.0f, _titleHeight);
     
+    CGFloat y = kTitleTop;
+    // Custom views
+    for (UIView *view in _customViews) {
+        view.frame = CGRectMake((_windowWidth - view.frame.size.height)/2. , y, view.frame.size.width, view.frame.size.height);
+        y += view.frame.size.height + 10.0f;
+    }
+    
+    _labelTitle.frame = CGRectMake(12.0f, y, _windowWidth - 24.0f, _titleHeight);
+    
+    
     // Text fields
-    CGFloat y = (_labelTitle.text == nil) ? kTitleTop : (_titleHeight - 10.0f) + _labelTitle.frame.size.height;
+    y = (_labelTitle.text == nil) ? y : y + _labelTitle.frame.size.height;
     _viewText.frame = CGRectMake(12.0f, y, _windowWidth - 24.0f, _subTitleHeight);
     
     if (!_labelTitle && !_viewText) {
         y = 0.0f;
     }
-
+    
     y += _subTitleHeight + 14.0f;
     for (SCLTextView *textField in _inputs) {
         textField.frame = CGRectMake(12.0f, y, _windowWidth - 24.0f, textField.frame.size.height);
         textField.layer.cornerRadius = 3.0f;
         y += textField.frame.size.height + 10.0f;
-    }
-    
-    // Custom views
-    for (UIView *view in _customViews) {
-        view.frame = CGRectMake(12.0f, y, view.frame.size.width, view.frame.size.height);
-        y += view.frame.size.height + 10.0f;
     }
     
     // Buttons
@@ -878,7 +882,15 @@ SCLTimerDisplay *buttonTimer;
     
     // Title
     if ([title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length > 0) {
-        self.labelTitle.text = title;
+        
+        // No custom text
+        if (_attributedTitleFormatBlock == nil) {
+            _labelTitle.text = title;
+        } else {
+            _labelTitle.font = [UIFont fontWithName:_titleFontFamily size:_titleFontSize];
+            _labelTitle.attributedText = self.attributedTitleFormatBlock(title);
+        }
+        
         
         // Adjust text view size, if necessary
         CGSize sz = CGSizeMake(_windowWidth - 24.0f, CGFLOAT_MAX);
@@ -1783,6 +1795,10 @@ SCLTimerDisplay *buttonTimer;
     };
     self.soundURL = ^(NSURL *soundURL) {
         weakSelf.alertView.soundURL = soundURL;
+        return weakSelf;
+    };
+    self.attributedTitleFormatBlock = ^(SCLAttributedTitleFormatBlock attributedTitleFormatBlock) {
+        weakSelf.alertView.attributedTitleFormatBlock = attributedTitleFormatBlock;
         return weakSelf;
     };
     self.attributedFormatBlock = ^(SCLAttributedFormatBlock attributedFormatBlock) {
