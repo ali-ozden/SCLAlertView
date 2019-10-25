@@ -281,10 +281,15 @@ NSString *kAttributeTitle = @"Attributed string operation successfully completed
     [alert addButton:@"First Button" target:self selector:@selector(firstButton)];
 
     
-    SCLTextView *textField = [alert addTextField:@"Enter your name"];
-    
+    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:@"ENTER YOUR EMAIL"];
+    [title addAttribute:NSKernAttributeName value:@2 range:NSMakeRange(0, title.length)];
+    [title addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, title.length)];
+    UITextField *txtField = [[UITextField alloc] init];
+    txtField.textAlignment = NSTextAlignmentCenter;
+    txtField.attributedPlaceholder = title;
+    [alert addCustomTextField:txtField];
     [alert addButton:@"Show Name" actionBlock:^(void) {
-        NSLog(@"Text value: %@", textField.text);
+        NSLog(@"Text value: %@", txtField.text);
     }];
     
     

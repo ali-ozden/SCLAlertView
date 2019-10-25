@@ -338,13 +338,15 @@ SCLTimerDisplay *buttonTimer;
     _circleViewBackground.layer.cornerRadius = _circleViewBackground.frame.size.height / 2;
     _circleView.layer.cornerRadius = _circleView.frame.size.height / 2;
     _circleIconImageView.frame = CGRectMake(kCircleHeight / 2 - _circleIconHeight / 2, kCircleHeight / 2 - _circleIconHeight / 2, _circleIconHeight, _circleIconHeight);
-    _labelTitle.frame = CGRectMake(12.0f, kTitleTop, _windowWidth - 24.0f, _titleHeight);
     
     CGFloat y = kTitleTop;
     // Custom views
-    for (UIView *view in _customViews) {
-        view.frame = CGRectMake((_windowWidth - view.frame.size.height)/2. , y, view.frame.size.width, view.frame.size.height);
-        y += view.frame.size.height + 10.0f;
+    if (_customViews && _customViews.count>0) {
+        for (UIView *view in _customViews) {
+            view.frame = CGRectMake((_windowWidth - view.frame.size.width)/2. , y, view.frame.size.width, view.frame.size.height);
+            y += view.frame.size.height + 10.0f;
+        }
+        y += 4.0f;
     }
     
     _labelTitle.frame = CGRectMake(12.0f, y, _windowWidth - 24.0f, _titleHeight);
@@ -354,15 +356,21 @@ SCLTimerDisplay *buttonTimer;
     y = (_labelTitle.text == nil) ? y : y + _labelTitle.frame.size.height;
     _viewText.frame = CGRectMake(12.0f, y, _windowWidth - 24.0f, _subTitleHeight);
     
-    if (!_labelTitle && !_viewText) {
-        y = 0.0f;
-    }
+    y = (_viewText.text == nil) ? y : y + _viewText.frame.size.height + 14.0;
     
-    y += _subTitleHeight + 14.0f;
-    for (SCLTextView *textField in _inputs) {
-        textField.frame = CGRectMake(12.0f, y, _windowWidth - 24.0f, textField.frame.size.height);
-        textField.layer.cornerRadius = 3.0f;
-        y += textField.frame.size.height + 10.0f;
+    if (_inputs && _inputs.count>0) {
+        for (UITextField *view in _inputs) {
+            CGFloat width = 250;
+            CGFloat height;
+            if (view.bounds.size.height != 0.0) {
+                height = view.bounds.size.height;
+            }else{
+                height = 25;
+            }
+            view.frame = CGRectMake((_windowWidth - width)/2. , y, width, height);
+            y += view.frame.size.height + 10.0f;
+        }
+        y += 4.0f;
     }
     
     // Buttons
@@ -373,8 +381,10 @@ SCLTimerDisplay *buttonTimer;
         // Add horizontal or vertical offset acording on _horizontalButtons parameter
         if (_horizontalButtons) {
             x += btn.frame.size.width + 10.0f;
+            _windowHeight = y + btn.frame.size.height + 10;
         } else {
             y += btn.frame.size.height + 10.0f;
+            _windowHeight = y ;
         }
     }
     
@@ -611,8 +621,11 @@ SCLTimerDisplay *buttonTimer;
 - (void)addCustomTextField:(UITextField *)textField
 {
     // Update view height
-    self.windowHeight += textField.bounds.size.height + 10.0f;
-    
+    if (textField.bounds.size.height != 0) {
+        self.windowHeight += textField.bounds.size.height + 10.0f;
+    }else{
+        self.windowHeight += 25 + 10.0f;
+    }
     [_contentView addSubview:textField];
     [_inputs addObject:textField];
     
@@ -947,9 +960,9 @@ SCLTimerDisplay *buttonTimer;
         _labelTitle.frame = CGRectMake(12.0f, 37.0f, _windowWidth - 24.0f, _titleHeight);
     }
     
-    if (!_labelTitle && !_viewText) {
-        self.windowHeight -= kTitleTop;
-    }
+//    if (!_labelTitle && !_viewText) {
+//        self.windowHeight -= kTitleTop;
+//    }
     
     // Add button, if necessary
     if(completeText != nil)
